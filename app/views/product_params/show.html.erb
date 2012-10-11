@@ -1,10 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Param:</b>
-  <%= @product_param.param %>
-</p>
+<table>
+  <tr>
+    <th>Param Name</th>
+    <th>Param Value</th>
+  </tr>
 
+<% parse_param(@product_param.param).each do |key, value| %>
+  <tr>
+    <td><%= key %></td>
+    <td><%= value %></td>
+  </tr>
+<% end %>
 
-<%= link_to 'Edit', edit_product_param_path(@product_param) %> |
+</table>
+
 <%= link_to 'Back', product_params_path %>
