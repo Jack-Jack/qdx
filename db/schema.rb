@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011012107) do
+ActiveRecord::Schema.define(:version => 20121012015242) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "parent_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "product_params", :force => true do |t|
     t.text     "param"
@@ -27,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20121011012107) do
     t.decimal  "price",       :precision => 8, :scale => 0
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
+    t.integer  "category_id"
   end
 
 end
