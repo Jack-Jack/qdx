@@ -1,5 +1,5 @@
 <h1>Listing products</h1>
-<table>
+<table class="blue_table">
 <% @products.each do |product| %>
   <tr class='<%= cycle('list_line_end', 'list_line_even') %>'>
     <td><%= image_tag product.primary_image_url.to_s, size: "120x100" %></td>
