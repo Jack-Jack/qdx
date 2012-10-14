@@ -42,3 +42,5 @@ gem 'jquery-rails', '2.0.2'
 
 # To use javascript, be sure that Node.js has been installed.
 gem 'execjs'
+
+gem 'carrierwave'
