@@ -1,0 +1,27 @@
+<h1>Listing product_attach_images</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Image URL</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @product_attach_images.each do |product_attach_image| %>
+  <tr>
+    <td><%= image_tag product_attach_image.image_url.to_s, size: "120x100" %></td>
+    <td><%= product_attach_image.product_id %></td>
+    <td><%= product_attach_image.image %></td>
+    <td><%= link_to 'Show', product_attach_image %></td>
+    <td><%= link_to 'Edit', edit_product_attach_image_path(product_attach_image) %></td>
+    <td><%= link_to 'Destroy', product_attach_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Product attach image', new_product_attach_image_path %>

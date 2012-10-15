@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<% @product_images.each do |image_item| %>
+<%= image_tag image_item.image_url.to_s %><br />
+<% end %>
+

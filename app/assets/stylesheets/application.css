@@ -14,5 +14,5 @@
 
 .blue_table {
 	table {border-collapse: collapse;} 
-	table tr td {padding: 5px; vertical-align: top; border: 1em solid blue;}
+	table tr td {padding: 5px; vertical-align: top; border: 1px solid blue;}
 }
