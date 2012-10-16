@@ -17,6 +17,7 @@ class Product < ActiveRecord::Base
   validate :validate_category_id
 
   has_one :product_param, dependent: :destroy
+  has_many :product_attach_image, dependent: :destroy
   belongs_to :category
 
 private

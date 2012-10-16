@@ -5,6 +5,8 @@ class ProductAttachImage < ActiveRecord::Base
   validates :image, :product_id, presence: true
   validate :validate_product_id
 
+  belongs_to :product
+
   mount_uploader :image, ProductImagesUploader
 
 private
