@@ -44,3 +44,4 @@ gem 'jquery-rails', '2.0.2'
 gem 'execjs'
 
 gem 'carrierwave'
+gem 'devise'

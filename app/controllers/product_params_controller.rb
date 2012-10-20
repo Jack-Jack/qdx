@@ -1,4 +1,6 @@
 class ProductParamsController < ApplicationController
+  before_filter :authenticate_admin!
+
   # GET /product_params
   # GET /product_params.json
   def index

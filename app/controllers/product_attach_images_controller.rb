@@ -1,4 +1,6 @@
 class ProductAttachImagesController < ApplicationController
+  before_filter :authenticate_admin!
+
   # GET /product_attach_images
   # GET /product_attach_images.json
   def index
